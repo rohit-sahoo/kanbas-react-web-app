@@ -93,25 +93,242 @@
                 </ul>
             </div>
         </div>
-
-        <div class="container-fluid">
-            <div class="d-flex flex-row align-items-center container-fluid pt-3 ms-2">
-                <i class="fa-solid fa-bars fa-xl me-3"></i>
-
-                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                    <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="../courses/index.html">CS4550.12631.202410</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Grades</li>
-                    </ol>
-                </nav>
-                <div class="ms-auto float-end">
-                    <a href="" class="btn btn-outline-secondary ellipsis">
-                        <i class="fa-solid fa-glasses me-1"></i>
-                        Student View
-                    </a>
+        
+            <div class="container-fluid">
+                <div class="d-none d-md-block">
+                    <div class="d-flex flex-row align-items-center container-fluid pt-3 ms-2">
+    
+                        <i class="fa-solid fa-bars fa-xl me-3"></i>
+    
+    
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="/Kanbas/Courses/Home/screen.html">CS4550.12631.202410</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Grades</li>
+                            </ol>
+                        </nav>
+                        <div class="ms-auto float-end">
+                            <a href="" class="btn btn-outline-secondary ellipsis">
+                                <i class="fa-solid fa-glasses me-1"></i>
+                                Student View
+                            </a>
+                        </div>
+                    </div>
+                    <hr />
                 </div>
-            </div>
-            <hr />
+    
+                <div class="d-block d-md-none mb-3">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-company-red">
+                        <div class="container-fluid">
+                            <div class="toggle-sidenav-icon">
+                                <a href="#" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" aria-expanded="false">
+                                    <i class="fa-solid fa-bars fa-xl"></i>
+                                </a>
+                            </div>
+    
+    
+                            <div class="ms-auto float-end icon-white toggle-icons">
+                                <i class="fa-solid fa-glasses me-1"></i>
+                                <a href="#collapseModuleBar" data-bs-toggle="collapse" role="button" aria-expanded="false">
+                                    <i class="fa-solid fa-angle-down fa-xl"></i>
+                                    <i class="fa-solid fa-x"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+    
+                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                        <div class="offcanvas-header">
+                            <a href="#">
+                                <img src="../../../images/canvas_icon.png" />
+                            </a>
+                            <button type="button" class="btn-close float-end" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    
+                        </div>
+    
+                        <div class="offcanvas-body">
+                            <ul class="list-group">
+                                <li class="list-group-item border-0">
+                                    <i class="fa-solid fa-gauge-high fa-2x"></i>
+                                    <a href="/Kanbas/Dashboard/screen.html">
+                                        Dashboard
+                                    </a>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <i id="account-icon" class="fa-solid fa-circle-user fa-2x"></i>
+                                    <a href="#">
+                                        Account
+                                    </a>
+                                    <i id="greater-than" class="fa-solid fa-greater-than float-end"></i>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <i class="fa-solid fa-book fa-2x"></i>
+                                    <a href="#">
+                                        Courses
+                                    </a>
+                                    <i id="greater-than" class="fa-solid fa-greater-than float-end"></i>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <i class="fa fa-calendar fa-2x"></i>
+                                    <a href="#">
+                                        Calendar
+                                    </a>
+                                </li>
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="fa-solid fa-inbox fa-2x"></i>
+                                    <a href="#" class="d-flex align-items-center flex-fill">
+                                        Inbox
+                                        <span class="fa-stack fa-2xs d-block notification-badger ml-auto ms-1">
+                                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                            <span class="fa fa-stack-1x text-center">
+                                                1
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+    
+                                <li class="list-group-item border-0">
+                                    <i class="fa-solid fa-right-from-bracket fa-2x"></i>
+                                    <a href="#">
+                                        Commons
+                                    </a>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <i class="fa-solid fa-desktop fa-2x"></i>
+                                    <a href="#">
+                                        Studio
+                                    </a>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <i class="fa-solid fa-clock fa-2x"></i>
+                                    <a href="#">
+                                        History
+                                    </a>
+                                    <i id="greater-than" class="fa-solid fa-greater-than float-end"></i>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <i class="fa-solid fa-circle-question fa-2x"></i>
+                                    <a href="#">
+                                        Help
+                                    </a>
+                                    <i id="greater-than" class="fa-solid fa-greater-than float-end"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="collapse" id="collapseModuleBar">
+                        <div class="card card-body ">
+                            <div>
+                                <ul class="list-group">
+                                    <li class="list-group-item border-0">
+                                        <i class="fa-solid fa-house me-1"></i>
+                                        <a href="/Kanbas/Courses/Home/screen.html">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fas fa-tasks me-1"></i>
+                                        <a href="/Kanbas/Courses/Modules/screen.html">
+                                            Modules
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fa-solid fa-plug me-1"></i>
+                                        <a href="#">
+                                            Piazza
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fa-solid fa-plug me-1"></i>
+                                        <a href="#">
+                                            Zoom Meetings
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fa-solid fa-pen-to-square me-1"></i>
+                                        <a href="/Kanbas/Courses/Assignments/screen.html">
+                                            Assignments
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fa-solid fa-rocket me-1"></i>
+                                        <a href="#">
+                                            Quizzes
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 active">
+                                        <i class="fa-solid fa-book me-1"></i>
+                                        <a href="/Kanbas/Courses/Grades/screen.html">
+                                            Grades
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fa-solid fa-people-group me-1"></i>
+                                        <a href="#">
+                                            People
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fa-solid fa-plug-circle-check me-1"></i>
+                                        <a href="#">
+                                            panopto videos
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fa-brands fa-signal-messenger me-1"></i>
+                                        <a href="#">
+                                            Discussion
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fa-solid fa-tower-cell me-1"></i>
+                                        <a href="#">
+                                            Announcement
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fa-solid fa-file-circle-check me-1"></i>
+                                        <a href="#">
+                                            pages
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fa-solid fa-book me-1"></i>
+                                        <a href="#">
+                                            Files
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fa-solid fa-list-check me-1"></i>
+                                        <a href="#">
+                                            Rubrics
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fa-solid fa-bullseye me-1"></i>
+                                        <a href="#">
+                                            Outcomes
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fa-solid fa-book-bookmark me-1"></i>
+                                        <a href="#">
+                                            Syllabus
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0">
+                                        <i class="fa fa-cog me-1"></i>
+                                        <a href="/Kanbas/Courses/Settings/screen.html">
+                                            Settings
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
 
             <div class="d-flex flex-row">
                 <div class="d-flex flex-column d-none d-lg-block" id="course-nav-sidebar">
@@ -125,7 +342,7 @@
                             <a href="/Kanbas/Courses/Home/screen.html">Home</a>
                         </li>
                         <li>
-                            <a href="#">Modules</a>
+                            <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
                         </li>
                         <li>
                             <a href="#">Piazza</a>
