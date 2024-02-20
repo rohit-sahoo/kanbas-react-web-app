@@ -2,6 +2,8 @@ import "./collapseModuleBar.css";
 import { FaHome, FaBook, FaBullhorn, FaPlug, FaTasks, FaRocket } from "react-icons/fa";
 import { FaPenToSquare, FaPeopleGroup } from "react-icons/fa6";
 import { Link, useLocation, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 function CollapseModuleBar() {
     const links = [

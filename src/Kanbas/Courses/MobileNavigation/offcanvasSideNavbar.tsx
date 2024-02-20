@@ -3,6 +3,8 @@ import { FaArrowRightFromBracket } from "react-icons/fa6";
 import { IoIosHelpCircleOutline } from "react-icons/io";
 import { Link, useLocation } from "react-router-dom";
 import "./offcanvasSideNavbar.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 function OffcanvasSideNavbar() {
     const links = [

@@ -3,6 +3,8 @@ import { assignments } from "../../../Database";
 import { FaCheckCircle, FaEllipsisV, FaPlus } from "react-icons/fa";
 import "./../../../style.css";
 import "./index.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 function AssignmentEditor() {
     const { assignmentId, courseId } = useParams();

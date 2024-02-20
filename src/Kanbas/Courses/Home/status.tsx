@@ -1,6 +1,8 @@
 import { FaBan, FaCheckCircle, FaFileImport, FaBullseye, FaBell, FaBullhorn, FaCircle, FaCalendar } from "react-icons/fa";
 import { FaChartSimple, FaXmark } from "react-icons/fa6";
 import "./status.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 function Status() {
     return (

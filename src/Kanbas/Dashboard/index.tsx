@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { FaEllipsisVertical, FaFilePen } from "react-icons/fa6";
 import './index.css';
 import MobileNavigation from '../Courses/MobileNavigation';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 function Dashboard() {
     return (

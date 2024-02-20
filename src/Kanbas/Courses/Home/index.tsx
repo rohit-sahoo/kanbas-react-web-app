@@ -1,7 +1,5 @@
 import ModuleList from "../Modules/moduleList";
 import Status from "./status";
-import "bootstrap/dist/js/bootstrap.bundle";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function Home() {
