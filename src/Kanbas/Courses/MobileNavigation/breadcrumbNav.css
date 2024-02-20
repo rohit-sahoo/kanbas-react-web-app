@@ -1,0 +1,25 @@
+.custom-breadcrumb {
+    --bs-breadcrumb-divider: '>';
+    text-decoration:none;
+}
+
+.breadcrumb-item a {
+    color: red;
+    font-size: large;
+    text-decoration:none;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+.course-routes {
+    width: 100%;
+    text-decoration:none;
+}
+
+.fa-glasses {
+    margin-right: 3px;
+    font-size: 18px;
+    text-decoration:none;
+}
