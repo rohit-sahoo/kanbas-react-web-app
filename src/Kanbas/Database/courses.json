@@ -1,8 +1,8 @@
 [
     {
         "_id": "CS101",
-        "name": "12631 Data Science",
-        "number": "CS4550",
+        "name": "12631 SPTP Data Science",
+        "number": "CS5670",
         "courseText": "Spring 2024 Semester Full Term Grad",
         "startDate": "2023-01-10",
         "endDate": "2023-05-15",
@@ -11,7 +11,7 @@
     {
         "_id": "CS102",
         "name": "12632 Machine Learning",
-        "number": "CS4560",
+        "number": "CS6140",
         "courseText": "Spring 2024 Semester Full Term Grad",
         "startDate": "2023-01-10",
         "endDate": "2023-05-15",
@@ -20,7 +20,7 @@
     {
         "_id": "CS103",
         "name": "12633 Deep Learning",
-        "number": "CS4570",
+        "number": "CS7150",
         "courseText": "Spring 2024 Semester Full Term Grad",
         "startDate": "2023-01-10",
         "endDate": "2023-05-15",

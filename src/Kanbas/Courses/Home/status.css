@@ -65,14 +65,23 @@
 .coming-up-item {
     margin-top: -8px;
 }
+.coming-up-item a{ 
+    color: red;
+}
 
 .coming-up-item-detail {
     font-size: 0.8em;
     text-decoration: underline;
 }
 
+.coming-up-item-detail a {
+    text-decoration: underline;
+    color:black;
+}
+
 .coming-up-item-detail:hover {
     text-decoration: none;
+    color: black;
 }
 
 .coming-up-item-link {

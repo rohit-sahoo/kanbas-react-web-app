@@ -1,10 +1,17 @@
 import { FaBan, FaCheckCircle, FaFileImport, FaBullseye, FaBell, FaBullhorn, FaCircle, FaCalendar } from "react-icons/fa";
 import { FaChartSimple, FaXmark } from "react-icons/fa6";
 import "./status.css";
+import { useParams } from "react-router";
+import { Link } from "react-router-dom";
+import { courses, assignments } from "../../Database";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 function Status() {
+    const { courseId } = useParams();
+    const course = courses.find((course) => course._id === courseId);
+    const { assignmentId } = useParams();
+    const assignment = assignments.find((assignment) => assignment._id === assignmentId);
     return (
         <div className="col-3 d-none d-xxl-block course-status-wrapper">
             <div className="d-flex flex-column">
@@ -67,11 +74,11 @@ function Status() {
                     <div className="col-9">
                         <div className="d-flex flex-column to-do">
                             <div>
-                                <a href="#" className="to-do-item">
-                                    Grade A1 - ENV + HTML
+                                <a className="to-do-item">
+                                    Grade - Assignment 1
                                 </a>
                                 <br />
-                                <a href="#" className="to-do-item-detail">
+                                <a  className="to-do-item-detail">
                                     100 points Sep 18 at 11:59pm
                                 </a>
                             </div>
@@ -89,7 +96,7 @@ function Status() {
                         </div>
                         <div className="col-5 text-nowrap calendar">
                             <FaCalendar />
-                            <a href="#" className="calendar-option"> View Calendar</a>
+                            <a className="calendar-option"> View Calendar</a>
                         </div>
                     </div>
                     <hr className="course-options" />
@@ -101,9 +108,11 @@ function Status() {
                             </div>
                             <div className="col-11 d-flex flex-column">
                                 <div className="row coming-up-item">
-                                    <a href="#" className="to-do-item">Lecture</a>
+                                    <a className="to-do-item">Lecture</a>
                                     <div className="coming-up-item-detail mb-3">
-                                        CS4550.12631.202410
+                                    <Link to={`/Kanbas/Courses/${course?._id}/Home`}>
+                                        {course?.number}{course?.startDate}
+                                    </Link>
                                         <br />
                                         Sep 11 at 11:45am
                                     </div>
@@ -117,9 +126,14 @@ function Status() {
                             </div>
                             <div className="col-11 d-flex flex-column">
                                 <div className="row coming-up-item">
-                                    <a href="#" className="to-do-item">CS5610 06 SP24 Lecture</a>
+                                    <a className="to-do-item">
+                                        <Link to={`/Kanbas/Courses/${course?._id}/Home`}>
+                                        {course?.number}
+                                    </Link> 06 SP24 Lecture 1</a>
                                     <div className="coming-up-item-detail mb-3">
-                                        CS5610.12631.202410
+                                    <Link to={`/Kanbas/Courses/${course?._id}/Home`}>
+                                        {course?.number}{course?.startDate}
+                                    </Link>
                                         <br />
                                         Sep 11 at 11:45am
                                     </div>
@@ -133,9 +147,13 @@ function Status() {
                             </div>
                             <div className="col-11 d-flex flex-column">
                                 <div className="row coming-up-item">
-                                    <a href="#" className="to-do-item text-wrap">CS5610 Web Developoment Summer 1 2024 - LECTURE</a>
+                                    <a className="to-do-item text-wrap"><Link to={`/Kanbas/Courses/${course?._id}/Home`}>
+                                        {course?.number}
+                                    </Link>  05 SP2024 - LECTURE 2</a>
                                     <div className="coming-up-item-detail mb-3">
-                                        CS5610.12631.202410
+                                    <Link to={`/Kanbas/Courses/${course?._id}/Home`}>
+                                        {course?.number}{course?.startDate}
+                                    </Link>
                                         <br />
                                         Sep 11 at 11:45am
                                     </div>
@@ -145,7 +163,7 @@ function Status() {
                     </div>
 
                     <div className="coming-up-item-link">
-                        <a href="#" className="to-do-item"> 12 more in the next week....</a>
+                        <a className="to-do-item"> 12 more in the next week....</a>
                     </div>
                 </div>
 
