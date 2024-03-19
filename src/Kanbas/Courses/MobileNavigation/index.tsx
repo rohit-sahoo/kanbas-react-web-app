@@ -3,8 +3,6 @@ import OffcanvasSideNavbar from "./offcanvasSideNavbar";
 import { FaBars, FaAngleDown, FaGlasses } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
 import "./index.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 function MobileNavigation() {
     return (
