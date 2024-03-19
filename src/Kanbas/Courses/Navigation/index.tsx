@@ -1,12 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
 import "./index.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 function CourseNavigation() {
-    const links = ["Home", "Modules", "Piazza", "Assignments", "Quizzes",
-        "Grades", "People", "Discussions", "Announcements", "Pages", "Files",
-        "Rubrics", "Outcomes", "Collaborations", "Syllabus", "Settings"];
+    const links = ["Home", "Modules", "Piazza", "Zoom Meetings", "Assignments", "Quizzes",
+        "Grades", "People", "Panopto Video", "Discussions", "Announcements", "Pages", "Files",
+        "Rubrics", "Outcomes", "Colloborations", "Syllabus", "Settings"];
 
     const { pathname } = useLocation();
 
