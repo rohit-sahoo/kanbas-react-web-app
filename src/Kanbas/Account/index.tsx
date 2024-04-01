@@ -11,7 +11,7 @@ function Account() {
             <span id="account-page-header" className="d-flex flex-row align-items-center">
                 <h2>
                     <FaBars className="me-4" />
-                    Bharat Chawla's Profile
+                    Rohit Sisir Sahoo Profile
                 </h2>
             </span>
             <hr />
