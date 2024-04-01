@@ -18,13 +18,13 @@ function Profile() {
                                 <FaRegUserCircle className="user-circle" />
                             </div>
                             <div className="profile-content">
-                                <h2 className="mt-2 mb-5" id="username">Bharat Chawla</h2>
+                                <h2 className="mt-2 mb-5" id="username">Rohit Sisir Sahoo</h2>
 
                                 <h3>Contact</h3>
                                 <p>No registered services, you can add some on the <Link to={`/Kanbas/Account/Settings`}>settings </Link>page.</p>
 
                                 <h3>Biography</h3>
-                                <p>Student, en route to software engineer, tech gadgets enthusiast, tennis lover, photographer.</p>
+                                <p>I'm a Graduate MS CS student at Northeastern University, Boston, United States. I worked as a Data Scientist at Tata Consultancy Services, India where I worked with Data Analytics and Insights team to find insights from the data. I'm also a Google Certified TensorFlow Developer. I have published several research papers and chapters on Machine Learning, Deep Learning and Image Processing. I'm also a 3x Kaggle Expert on the Kaggle platform..</p>
 
                                 <h3>Links</h3>
                                 <ul>

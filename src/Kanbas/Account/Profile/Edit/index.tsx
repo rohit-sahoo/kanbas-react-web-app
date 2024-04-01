@@ -35,7 +35,7 @@ function EditProfile() {
                                     <label className="ic-label">
                                         Name:
                                         <span title="This field is required">*</span>
-                                        <input type="text" className="ic-input" value="Bharat Chawla" placeholder="Name" />
+                                        <input type="text" className="ic-input" value="Rohit Sisir Sahoo" placeholder="Name" />
                                     </label>
                                     <label className="ic-label">Pronouns:</label>
                                     <select>
