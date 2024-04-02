@@ -10,11 +10,13 @@
 
 #account-sidebar li a {
     color: red;
+    text-decoration: none; 
 }
 
 #account-sidebar li a:hover {
-    text-decoration: none;
+    text-decoration: underline;
 }
+
 
 #account-sidebar li.active {
     font-weight: bold;

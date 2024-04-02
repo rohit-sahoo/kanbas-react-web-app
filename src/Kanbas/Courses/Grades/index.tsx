@@ -5,12 +5,10 @@ import { useParams } from "react-router-dom";
 import { assignments, enrollments, grades, users } from "../../Database";
 import { useState } from "react";
 import "./index.css"
-import "bootstrap/dist/js/bootstrap.bundle";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { IAssignment } from "../../Interfaces/assignment";
+import { IEnrollment } from "../../Interfaces/enrollment";
 
 function Grades() {
-
-    // declaring interface to enforce structure for json
     interface Assignment {
         _id: String;
         title: String;
@@ -20,15 +18,9 @@ function Grades() {
         points: Number
     }
 
-    interface Enrollment {
-        _id: String;
-        user: String;
-        course: String;
-    }
-
     const { courseId } = useParams();
     const assignment: Assignment[] = assignments.filter((assignment) => assignment.course === courseId);
-    const enrollment: Enrollment[] = enrollments.filter((enrollment) => enrollment.course === courseId);
+    const enrollment: IEnrollment[] = enrollments.filter((enrollment) => enrollment.course === courseId);
 
     // use state if grade input field is selected
     const [selectedGradeId, setSelectedGradeId] = useState('');

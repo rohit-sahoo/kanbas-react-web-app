@@ -3,13 +3,14 @@ import { FaGlasses } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { useParams } from "react-router";
 import "./breadcrumbNav.css"
-import { Course } from "../../Interfaces/course";
+import { ICourse } from "../../Interfaces/course";
+import { useEffect, useState } from "react";
+import * as api from "../api";
 
-function BreadcrumbNav({ courses }: { courses: Course[] }) {
+function BreadcrumbNav() {
 
     const { courseId } = useParams();
-    const course = courses.find((course) => course._id === courseId);
-
+    const [course, setCourse] = useState<ICourse>();
     const { pathname } = useLocation();
     const pathParts = decodeURIComponent(pathname).split("/");
     const activeBreadcrumb = pathParts[pathParts.length - 1];
@@ -22,6 +23,16 @@ function BreadcrumbNav({ courses }: { courses: Course[] }) {
         idMatch = pathname.match(/\/([^/]+)$/);
         assignmentId = idMatch ? idMatch[1] : null;
     }
+
+    const findCourseById = async (courseId?: string) => {
+        const course = await api.fetchCourseById(courseId);
+        setCourse(course);
+    };
+
+    useEffect(() => {
+        findCourseById(courseId);
+    }, [courseId]);
+
 
     console.log("activeBreadcrumb:", activeBreadcrumb);
     console.log("isAssignmentPath:", isAssignmentPath);

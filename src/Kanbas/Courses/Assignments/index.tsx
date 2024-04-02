@@ -5,11 +5,12 @@ import "./index.css";
 import "./../../style.css";
 import { KanbasState } from "../../Store";
 import { useSelector, useDispatch } from "react-redux";
-import { selectAssignment } from "./assignmentsReducer";
-import { useState } from "react";
+import { deleteAssignment, resetAssignmentForm, selectAssignment, setAssignments, updateAssignment } from "./assignmentsReducer";
+import { useEffect, useState } from "react";
 import { MdDelete } from "react-icons/md";
-import { Assignment } from "../../Interfaces/assignment";
+import { IAssignment } from "../../Interfaces/assignment";
 import DeleteAssignment from "./deleteAssignment";
+import * as api from "./api";
 
 function Assignments() {
 
@@ -22,32 +23,45 @@ function Assignments() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const assignmentList = useSelector((state: KanbasState) => state.assignmentReducer.assignments)
-        .filter((assignment) => assignment.course === courseId);
+    const assignmentList = useSelector((state: KanbasState) => state.assignmentReducer.assignments);
     const [showDropdowns, setShowDropdowns] = useState(Array(assignmentList.length).fill(false));
     const [showDeleteModal, setShowDeleteModal] = useState(false);
-
+    //initialize the 
+    //useeffect: setshowdropdown - assignmentList.length !
     const toggleDropdown = (index: number) => {
+        console.log("here in the dropdown: ", index)
+        console.log("before", showDropdowns)
         setShowDropdowns(prevState =>
             prevState.map((value, idx) => idx === index ? !value : value)
         );
+        console.log("after:", showDropdowns)
     }
 
-    const handleDropdownSelectedOption = (selectedItem: string, assignment: Assignment) => {
-        console.log(selectedItem);
+    const handleDropdownSelectedOption = async (selectedItem: string, assignment: IAssignment) => {
+        
+        dispatch(selectAssignment(assignment));
         setShowDropdowns(Array(assignmentList.length).fill(false));
 
         switch (selectedItem) {
             case 'Edit':
-                dispatch(selectAssignment(assignment));
                 navigate(`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`);
                 break;
             case 'Delete':
-                dispatch(selectAssignment(assignment));
                 setShowDeleteModal(true);
                 break;
         }
     }
+
+    useEffect(() => {
+        api.fetchAssignmentsForCourse(courseId)
+            .then((assignments) =>
+                dispatch(setAssignments(assignments))
+            );
+    }, [courseId]);
+
+    useEffect(() => {
+        setShowDropdowns(Array(assignmentList.length).fill(false));
+      }, [assignmentList.length]);
 
     return (
         <div className="container-fluid d-flex flex-row me-5">
@@ -155,5 +169,6 @@ function Assignments() {
         </div >
     );
 }
+
 
 export default Assignments
