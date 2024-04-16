@@ -1,9 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { IAssignment } from "../../Interfaces/assignment";
+interface Assignment {
+    _id: string;
+    title: string;
+    course: string;
+    dueDate: string;
+    dueTime: string;
+    points: number;
+    description: string;
+    availableFrom: string;
+    availableUntil: string;
+}
 
 interface InitialState {
-    assignments: IAssignment[],
-    assignment: IAssignment;
+    assignments: Assignment[],
+    assignment: Assignment;
 }
 
 const initialState: InitialState = {

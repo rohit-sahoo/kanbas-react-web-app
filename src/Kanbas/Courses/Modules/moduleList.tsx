@@ -7,12 +7,27 @@ import { useLocation } from "react-router-dom";
 import "./moduleList.css";
 import "./../../style.css";
 import AddModule from "./addModule";
-import { IModule } from "../../Interfaces/module";
 import EditModule from "./editModule";
 import { useSelector, useDispatch } from "react-redux";
 import { KanbasState } from "../../Store";
 import { deleteModule, resetModuleForm, setModule, setModules, updateModule } from "./modulesReducer";
 import * as api from "./api";
+
+
+interface Lesson {
+    _id: string;
+    name: string;
+    description: string;
+    module: string;
+    indent: number;
+}
+interface Module {
+    _id: string;
+    name: string;
+    description: string;
+    course: string;
+    lessons?: Lesson[];
+}
 
 function ModuleList() {
 
@@ -44,7 +59,7 @@ function ModuleList() {
         setShowDropdown(!showDropdown);
     }
 
-    const handleDropdownSelectedOption = async (selectedItem: string, module: IModule) => {
+    const handleDropdownSelectedOption = async (selectedItem: string, module: Module) => {
         console.log(selectedItem);
 
         switch (selectedItem) {

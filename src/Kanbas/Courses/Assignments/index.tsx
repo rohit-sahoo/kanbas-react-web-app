@@ -8,10 +8,21 @@ import { useSelector, useDispatch } from "react-redux";
 import { deleteAssignment, resetAssignmentForm, selectAssignment, setAssignments, updateAssignment } from "./assignmentsReducer";
 import { useEffect, useState } from "react";
 import { MdDelete } from "react-icons/md";
-import { IAssignment } from "../../Interfaces/assignment";
 import DeleteAssignment from "./deleteAssignment";
 import * as api from "./api";
 
+
+interface Assignment {
+    _id: string;
+    title: string;
+    course: string;
+    dueDate: string;
+    dueTime: string;
+    points: number;
+    description: string;
+    availableFrom: string;
+    availableUntil: string;
+}
 function Assignments() {
 
     const assignmentDropDownOptions = [
@@ -37,7 +48,7 @@ function Assignments() {
         console.log("after:", showDropdowns)
     }
 
-    const handleDropdownSelectedOption = async (selectedItem: string, assignment: IAssignment) => {
+    const handleDropdownSelectedOption = async (selectedItem: string, assignment: Assignment) => {
         
         dispatch(selectAssignment(assignment));
         setShowDropdowns(Array(assignmentList.length).fill(false));

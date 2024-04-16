@@ -1,9 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { IModule } from "../../Interfaces/module";
+interface Lesson {
+    _id: string;
+    name: string;
+    description: string;
+    module: string;
+    indent: number;
+}
+interface Module {
+    _id: string;
+    name: string;
+    description: string;
+    course: string;
+    lessons?: Lesson[];
+}
 
 interface InitialState {
-    modules: IModule[],
-    module: IModule;
+    modules: Module[],
+    module: Module;
 }
 
 const initialState: InitialState = {

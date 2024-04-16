@@ -6,12 +6,21 @@ import Account from "./Account";
 import React, { useEffect, useState } from "react";
 import store from "./Store";
 import { Provider } from "react-redux";
-import { ICourse } from "./Interfaces/course";
 import * as api from "./Courses/api";
+
+interface Course {
+    _id: string;
+    name: string;
+    number: string;
+    courseText: string;
+    startDate: string;
+    endDate: string;
+    image: string;
+}
 
 function Kanbas() {
 
-    const [courses, setCourses] = useState<ICourse[]>([]);
+    const [courses, setCourses] = useState<Course[]>([]);
 
     const [course, setCourse] = useState({
         _id: "0",
@@ -62,6 +71,7 @@ function Kanbas() {
                         <Route path="/" element={<Navigate to="Dashboard" />} />
                         <Route path="Account/*" element={<Account />} />
                         <Route path="Dashboard" element={
+                        
                             <Dashboard
                                 courses={courses}
                                 course={course}
